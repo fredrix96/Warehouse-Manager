@@ -28,3 +28,23 @@ void GoodsCatalog::addGoods(std::string typeName, std::string location)
 		goodsTypes.back().addGoodsEntry(location);
 	}
 }
+
+void GoodsCatalog::loadFromFile(std::string fileName)
+{
+	std::ifstream fileReader(fileName);
+
+	std::string type = "";
+	int shelf = 0;
+	int compartment = 0;
+
+	std::string location = "";
+
+	while (fileReader >> type >> shelf >> compartment)
+	{
+		location = std::to_string(shelf) + " " + std::to_string(compartment);
+
+		addGoods(type, location);
+	}
+
+	fileReader.close();
+}

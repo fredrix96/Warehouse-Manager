@@ -1,6 +1,7 @@
 #ifndef GOODS_CATALOG
 #define GOODS_CATALOG
 
+#include <fstream>
 #include "GoodsType.h"
 #include <vector>
 
