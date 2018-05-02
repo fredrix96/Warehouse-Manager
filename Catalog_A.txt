@@ -1,0 +1,3 @@
+# Layout: Type Shelf Compartment
+Apple 3 6
+Orange 5 32
